@@ -121,13 +121,13 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-dark relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-dark relative overflow-hidden mt-16 sm:mt-0">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-gradient-primary opacity-10"></div>
       </div>
 
-      <div className="w-full max-w-[1400px] 1680:max-w-[1600px] mx-auto px-2 sm:px-3 lg:px-4 1680:px-8 relative z-10 top-8 md:top-10">
+      <div className="w-full max-w-[1400px] 1680:max-w-[1600px] mx-auto px-2 sm:px-3 lg:px-4 1680:px-8 relative z-10 lg:top-8">
         <div className="grid lg:grid-cols-3 gap-3 lg:gap-12 xl:gap-24 1680:gap-32 items-center w-full">
           {/* Left Content */}
           <div className="space-y-5 sm:space-y-4 lg:space-y-6 1680:space-y-8 animate-fade-in order-1 lg:order-1 text-center lg:text-left col-span-1 lg:pl-2 xl:pl-3 1680:pl-8">
