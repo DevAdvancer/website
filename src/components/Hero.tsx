@@ -121,16 +121,16 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-dark relative overflow-hidden pt-[2px]">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-dark relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-gradient-primary opacity-10"></div>
       </div>
 
-      <div className="w-full max-w-[1400px] 1680:max-w-[1400px] mx-auto px-2 sm:px-3 lg:px-4 1680:px-8 relative z-10 top-8">
+      <div className="w-full max-w-[1400px] 1680:max-w-[1600px] mx-auto px-2 sm:px-3 lg:px-4 1680:px-8 relative z-10 top-8 md:top-10">
         <div className="grid lg:grid-cols-3 gap-3 lg:gap-12 xl:gap-24 1680:gap-32 items-center w-full">
           {/* Left Content */}
-          <div className="space-y-5 sm:space-y-4 lg:space-y-6 1680:space-y-8 animate-fade-in order-1 lg:order-1 text-center lg:text-left col-span-1 lg:pl-2 xl:pl-3 1680:pl-8 top-8">
+          <div className="space-y-5 sm:space-y-4 lg:space-y-6 1680:space-y-8 animate-fade-in order-1 lg:order-1 text-center lg:text-left col-span-1 lg:pl-2 xl:pl-3 1680:pl-8">
             <div className="space-y-4 sm:space-y-3 lg:space-y-4 1680:space-y-6">
               <h1 className="text-4xl sm:text-3xl md:text-4xl xl:text-5xl 1680:text-7xl font-bold leading-tight">
                 <span className="text-white">UNIVOLVE</span>
@@ -161,7 +161,7 @@ const Hero = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 lg:gap-3 1680:gap-6 pt-4 lg:pt-5 1680:pt-8 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 lg:gap-3 1680:gap-6 pt-3 lg:pt-4 1680:pt-8 justify-center lg:justify-start">
               <Button
                 variant="hero"
                 size="sm"
