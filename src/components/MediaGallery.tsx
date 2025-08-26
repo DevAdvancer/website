@@ -6,13 +6,14 @@ interface MediaItem {
   title: string;
   url: string;
   thumbnail?: string;
+  videoUrl?: string;
   description: string;
-  type: 'video' | 'image';
+  type?: 'video' | 'image';
 }
 
 interface MediaGalleryProps {
-  videos: MediaItem[];
-  images: MediaItem[];
+  videos: any[];
+  images: any[];
   fallbackImage: string;
 }
 
@@ -33,7 +34,7 @@ const MediaGallery = ({ videos, images, fallbackImage }: MediaGalleryProps) => {
               <div
                 key={video.id}
                 className="group cursor-pointer bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
-                onClick={() => setSelectedMedia(video.url)}
+                onClick={() => setSelectedMedia(video.videoUrl || video.url)}
               >
                 <div className="relative">
                   <img
@@ -110,7 +111,7 @@ const MediaGallery = ({ videos, images, fallbackImage }: MediaGalleryProps) => {
             >
               ✕
             </button>
-            {selectedMedia.endsWith('.mp4') || selectedMedia.endsWith('.webm') || selectedMedia.endsWith('.ogv') ? (
+            {(selectedMedia.includes('.mp4') || selectedMedia.includes('.webm') || selectedMedia.includes('.ogv') || selectedMedia.includes('video')) ? (
               <video
                 src={selectedMedia}
                 controls

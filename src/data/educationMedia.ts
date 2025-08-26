@@ -1,16 +1,18 @@
-// Import all education images
-import image1 from "../assets/education/images/1.jpeg";
-import image2 from "../assets/education/images/2.jpeg";
-import image3 from "../assets/education/images/3.jpeg";
-import image4 from "../assets/education/images/4.jpeg";
-import image5 from "../assets/education/images/5.jpeg";
-import image6 from "../assets/education/images/6.jpeg";
+// Import education images (Vite handles these well)
+import image1 from "@/assets/education/images/1.jpeg";
+import image2 from "@/assets/education/images/2.jpeg";
+import image3 from "@/assets/education/images/3.jpeg";
+import image4 from "@/assets/education/images/4.jpeg";
+import image5 from "@/assets/education/images/5.jpeg";
+import image6 from "@/assets/education/images/6.jpeg";
 
-// Import all education videos and thumbnails
-import video1 from "../assets/education/videos/1st.mp4";
-import video1Thumbnail from "../assets/education/videos/1st.png";
-import video2 from "../assets/education/videos/2nd.mp4";
-import video2Thumbnail from "../assets/education/videos/2nd.jpeg";
+// Import video thumbnails (images work fine)
+import video1Thumbnail from "@/assets/education/videos/1st.png";
+import video2Thumbnail from "@/assets/education/videos/2nd.jpeg";
+
+// Video URLs as strings (Vite doesn't handle video imports well)
+const video1Url = "/assets/education/videos/1st.mp4";
+const video2Url = "/assets/education/videos/2nd.mp4";
 
 export const educationMediaConfig = {
   videos: [
@@ -18,7 +20,7 @@ export const educationMediaConfig = {
       id: 1,
       title: "Analyzing Students with personal PI's and tests",
       thumbnail: video1Thumbnail,
-      videoUrl: video1,
+      videoUrl: video1Url,
       description:
         "Learn how our comprehensive approach to analyzing students through personalized assessments and testing methodologies enhances learning outcomes and academic success.",
     },
@@ -26,7 +28,7 @@ export const educationMediaConfig = {
       id: 2,
       title: "University Partnership Program",
       thumbnail: video2Thumbnail,
-      videoUrl: video2,
+      videoUrl: video2Url,
       description:
         "Our successful collaboration with leading universities to enhance curriculum and student outcomes.",
     },
