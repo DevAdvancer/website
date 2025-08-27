@@ -82,9 +82,7 @@ const EducationalServices = () => {
     "Comprehensive progress tracking and real-time analytics",
     "Ongoing support and continuous optimization",
     "Scalable solutions that grow with your organization",
-    "Compliance with international educational standards",
-    "Mobile-friendly learning platforms for accessibility",
-    "Integration with existing HR and LMS systems",
+    "Compliance with international educational standards"
   ];
 
   return (
@@ -246,7 +244,7 @@ const EducationalServices = () => {
               <Play className="mr-3 h-6 w-6 text-primary" />
               Success Stories & Program Highlights
             </h3>
-            <div className="grid md:grid-cols-2 gap-20">
+            <div className="grid md:grid-cols-2 gap-16">
               {educationMediaConfig.videos.map((video) => (
                 <div
                   key={video.id}

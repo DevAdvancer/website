@@ -10,7 +10,7 @@ import image6 from "@/assets/education/images/6.jpeg";
 import video1Thumbnail from "@/assets/education/videos/1st.png";
 import video2Thumbnail from "@/assets/education/videos/2nd.jpeg";
 
-// Video URLs as strings (Vite doesn't handle video imports well)
+// Video URLs - using public folder for better Vite compatibility
 const video1Url = "/assets/education/videos/1st.mp4";
 const video2Url = "/assets/education/videos/2nd.mp4";
 
@@ -90,7 +90,7 @@ export const educationMediaConfig = {
       description: "Students successfully trained",
     },
     {
-      metric: "50+",
+      metric: "4+",
       description: "University partnerships established",
     },
     {
