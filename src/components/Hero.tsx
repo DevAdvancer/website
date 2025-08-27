@@ -1,8 +1,22 @@
 import { Button } from "@/components/ui/button";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ArrowRight, CheckCircle, Play, Monitor, Users, Briefcase, Gavel } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle,
+  Play,
+  Monitor,
+  Users,
+  Briefcase,
+  Gavel,
+} from "lucide-react";
 import heroImage from "@/assets/hero-consulting.jpg";
 import meetingImage from "@/assets/meeting-room.jpg";
 import workspaceImage from "@/assets/workspace.jpg";
@@ -59,11 +73,11 @@ const Hero = () => {
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({ behavior: "smooth" });
   };
 
   const goToContact = () => {
-    navigate('/contact');
+    navigate("/contact");
   };
 
   useEffect(() => {
@@ -121,13 +135,15 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-dark relative overflow-hidden mt-16 sm:mt-0">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center bg-gradient-dark relative overflow-hidden mt-16 sm:mt-0">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-gradient-primary opacity-10"></div>
       </div>
 
-      <div className="w-full max-w-[1400px] 1680:max-w-[1600px] mx-auto px-2 sm:px-3 lg:px-4 1680:px-8 relative z-10 lg:top-8">
+      <div className="w-full h-screen mx-auto px-2 sm:px-3 lg:px-4 relative z-10 flex items-center justify-center pt-16 sm:pt-20 lg:pt-24">
         <div className="grid lg:grid-cols-3 gap-3 lg:gap-12 xl:gap-24 1680:gap-32 items-center w-full">
           {/* Left Content */}
           <div className="space-y-5 sm:space-y-4 lg:space-y-6 1680:space-y-8 animate-fade-in order-1 lg:order-1 text-center lg:text-left col-span-1 lg:pl-2 xl:pl-3 1680:pl-8">
@@ -140,7 +156,9 @@ const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg sm:text-base md:text-lg xl:text-xl 1680:text-3xl text-gray-300 leading-relaxed max-w-md 1680:max-w-xl mx-auto lg:mx-0">
-                Univolve Consulting delivers world-class solutions across education, technology, virtual assistance, and legal services to accelerate your business growth.
+                Univolve Consulting delivers world-class solutions across
+                education, technology, virtual assistance, and legal services to
+                accelerate your business growth.
               </p>
             </div>
 
@@ -149,13 +167,17 @@ const Hero = () => {
               {[
                 "Expert team with proven track record across industries",
                 "Customized solutions designed for your unique challenges",
-                "End-to-end support from strategy to implementation"
+                "End-to-end support from strategy to implementation",
               ].map((item, index) => (
-                <div key={index} className="flex items-center space-x-4 lg:space-x-3 1680:space-x-6">
+                <div
+                  key={index}
+                  className="flex items-center space-x-4 lg:space-x-3 1680:space-x-6">
                   <div className="p-2 sm:p-1 1680:p-3 bg-primary rounded-full flex-shrink-0">
                     <CheckCircle className="text-black h-5 w-5 sm:h-3 sm:w-3 xl:h-4 xl:w-4 1680:h-7 1680:w-7" />
                   </div>
-                  <span className="text-gray-300 text-lg sm:text-sm lg:text-base xl:text-lg 1680:text-2xl">{item}</span>
+                  <span className="text-gray-300 text-lg sm:text-sm lg:text-base xl:text-lg 1680:text-2xl">
+                    {item}
+                  </span>
                 </div>
               ))}
             </div>
@@ -166,8 +188,7 @@ const Hero = () => {
                 variant="hero"
                 size="sm"
                 onClick={goToContact}
-                className="group text-lg sm:text-sm xl:text-base 1680:text-2xl font-semibold px-6 sm:px-4 xl:px-5 1680:px-10 py-3 sm:py-2 xl:py-2.5 1680:py-5 shadow-gold hover:shadow-gold transform hover:scale-105"
-              >
+                className="group text-lg sm:text-sm xl:text-base 1680:text-2xl font-semibold px-6 sm:px-4 xl:px-5 1680:px-10 py-3 sm:py-2 xl:py-2.5 1680:py-5 shadow-gold hover:shadow-gold transform hover:scale-105">
                 Get Started Today
                 <ArrowRight className="ml-3 sm:ml-2 h-5 w-5 sm:h-4 sm:w-4 xl:h-5 xl:w-5 1680:h-8 1680:w-8 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -175,8 +196,7 @@ const Hero = () => {
                 variant="outline"
                 size="sm"
                 onClick={goToContact}
-                className="border-primary text-primary hover:bg-primary hover:text-black text-lg sm:text-sm xl:text-base 1680:text-2xl font-semibold px-6 sm:px-4 xl:px-5 1680:px-10 py-3 sm:py-2 xl:py-2.5 1680:py-5 group"
-              >
+                className="border-primary text-primary hover:bg-primary hover:text-black text-lg sm:text-sm xl:text-base 1680:text-2xl font-semibold px-6 sm:px-4 xl:px-5 1680:px-10 py-3 sm:py-2 xl:py-2.5 1680:py-5 group">
                 <Play className="mr-3 sm:mr-2 h-5 w-5 sm:h-4 sm:w-4 xl:h-5 xl:w-5 1680:h-8 1680:w-8 group-hover:scale-110 transition-transform" />
                 Watch Our Story
               </Button>
@@ -186,7 +206,9 @@ const Hero = () => {
           {/* Right Content - Image Carousel */}
           <div className="relative animate-slide-in order-2 lg:order-2 w-full px-0 xl:px-6 1680:px-10 lg:col-span-2 flex justify-end">
             <div className="w-full">
-              <Carousel setApi={setCarouselApi} className="w-full mb-4 sm:mb-2 xl:mb-4 1680:mb-10">
+              <Carousel
+                setApi={setCarouselApi}
+                className="w-full mb-4 sm:mb-2 xl:mb-4 1680:mb-10">
                 <CarouselContent className="ml-0">
                   {carouselImages.map((img, idx) => (
                     <CarouselItem key={img.caption} className="pl-0">
@@ -198,7 +220,9 @@ const Hero = () => {
                         />
                         <div className="absolute inset-0 bg-gradient-primary opacity-20 rounded-2xl sm:rounded-xl xl:rounded-2xl 1680:rounded-3xl"></div>
                         <div className="absolute bottom-4 left-4 sm:bottom-2 sm:left-2 xl:bottom-4 xl:left-4 1680:bottom-10 1680:left-10 bg-black/60 backdrop-blur-sm p-3 sm:p-2 xl:p-3 1680:p-6 rounded-lg">
-                          <span className="text-white font-semibold text-lg sm:text-xs xl:text-sm 1680:text-2xl">{img.caption}</span>
+                          <span className="text-white font-semibold text-lg sm:text-xs xl:text-sm 1680:text-2xl">
+                            {img.caption}
+                          </span>
                         </div>
                       </div>
                     </CarouselItem>
@@ -223,22 +247,25 @@ const Hero = () => {
                           ? "bg-primary text-black"
                           : "bg-white text-black",
                         "text-lg sm:text-xs xl:text-sm 1680:text-xl"
-                      )}
-                    >
-                      <Icon className={cn(
-                        "h-7 w-7 sm:h-5 sm:w-5 xl:h-6 xl:w-6 1680:h-10 1680:w-10 mb-2 sm:mb-1 xl:mb-2 1680:mb-4",
-                        isActive ? "text-white/90" : "text-black/80"
-                      )} />
-                      <span className={cn(
-                        "font-bold mb-1 sm:mb-0.5 text-left",
-                        isActive ? "text-white" : "text-black"
                       )}>
+                      <Icon
+                        className={cn(
+                          "h-7 w-7 sm:h-5 sm:w-5 xl:h-6 xl:w-6 1680:h-10 1680:w-10 mb-2 sm:mb-1 xl:mb-2 1680:mb-4",
+                          isActive ? "text-white/90" : "text-black/80"
+                        )}
+                      />
+                      <span
+                        className={cn(
+                          "font-bold mb-1 sm:mb-0.5 text-left",
+                          isActive ? "text-white" : "text-black"
+                        )}>
                         {service.label}
                       </span>
-                      <span className={cn(
-                        "text-base sm:text-[10px] xl:text-xs 1680:text-lg text-left opacity-80 leading-tight",
-                        isActive ? "text-white" : "text-black"
-                      )}>
+                      <span
+                        className={cn(
+                          "text-base sm:text-[10px] xl:text-xs 1680:text-lg text-left opacity-80 leading-tight",
+                          isActive ? "text-white" : "text-black"
+                        )}>
                         {service.description}
                       </span>
                     </button>
